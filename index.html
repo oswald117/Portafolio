@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador</title>
+        <link rel="Shortcut icon" href="imagenes/Logologo1.png">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img class="logo1" src="imagenes/Logologo1.png" alt="Logo-alura" >
+        </header>
+        <main>
+            <section>
+                <textarea id="texto_encriptar" class="Texto" cols="30" rows="10" placeholder="Ingresa el texto aqui." ></textarea>
+                <div class="advertencia">
+                    <h6 class="texto_advertencia" >Solo letras minusculas y sin acentos.</h6>
+                </div>
+                <div class="botones">
+                    <button id="boton_encript" class="boton_encriptar"  >Encriptar </button>
+                    <button id="boton_desencrip" class="boton_desencriptar" >Desencriptar</button>
+                </div>
+            </section>
+            <aside>
+                <textarea id="texto_desencriptado"  class="mensaje" cols="20" rows="10" ></textarea>
+                <div>
+                    <button id="boton_copy" class="Boton_copiar" >Copiar texto</button>
+                </div>
+            </aside>
+        </main>
+    </body>
+    <footer>
+        <p>Creado por Oswaldo</p>
+    </footer>
+    <script>
+        var btn = document.querySelector("#boton_encript");
+        btn.onclick = encriptar;
+        var btn2 = document.querySelector("#boton_desencrip");
+        btn2.onclick = desencriptar;
+        var btn3 = document.querySelector("#boton_copy");
+        btn3.onclick = copiar;
+    </script>
+</html>
